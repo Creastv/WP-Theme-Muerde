@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* Template name: Participa y gana
+* Template name: Recursos
 */
 get_header(); ?>
     <div id="header-page">
@@ -14,18 +14,8 @@ get_header(); ?>
 
 	<div id="page" class="container-fluid">
 	    <div class="row">
-	        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-0 col-xl-1"></div>
-	        <div class=" col-12 col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-2">
-	        	<div class="sidebar-template">
-	        	<div class="sidebar" id="sidebar">
-					<?php do_action( 'before_sidebar' ); ?>
-					<?php if ( ! dynamic_sidebar( 'sidebar-4' ) ) : ?>
-					<?php endif; ?>
-				</div>
-				</div>
-			</div>
-	       	
-			<div id="content" class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-8 order-first order-lg-1">
+	        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-3"></div>
+			<div id="content" class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-6">
 				<?php while ( have_posts() ) : the_post(); ?>
 				    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
@@ -37,15 +27,8 @@ get_header(); ?>
 					</article><!-- #post-## -->
 				<?php endwhile; ?>
             </div>
-            
 		</div>
 	</div>
 	<div class="scroll-bottom"></div>	
 
 <?php get_footer(); ?>
-<script>
-    if (jQuery(window).width() > 768) {
-       sidebarSticky();  
-    }
-</script>
-

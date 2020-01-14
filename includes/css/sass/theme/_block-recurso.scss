@@ -1,0 +1,41 @@
+.recurso{
+    margin-bottom: 15px;
+    padding: 10px;
+    .left{
+        display: inline-block;
+        width: 49%;
+        vertical-align: middle;
+        text-align: center;
+         @media #{$xxs} {
+            width: 100%;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+    .right{
+        display: inline-block;
+        width: 49%;
+        vertical-align: middle;
+        text-align: center;
+        @media #{$xxs} {
+            width: 100%;
+        }
+        .button-enlace{
+            background:#eee;
+            padding: 20px;
+            border-radius:20px;
+            margin: 5px;
+            @media #{$xxs} {
+                padding: 10px;
+            }
+            p{}
+            a{
+                padding: 0 30px;
+                 @media #{$xxs} {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

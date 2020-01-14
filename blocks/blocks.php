@@ -56,6 +56,16 @@ function register_acf_block_types() {
         'icon'              => 'admin-comments',
         'keywords'          => array( 'título', 'dentista' ),
     ));
+     // register Block.
+    acf_register_block_type(array(
+        'name'              => 'recurso',
+        'title'             => __('Recurso'),
+        'description'       => __('Recurso'),
+        'render_template'   => 'blocks/recursos.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'recurso', 'dentista' ),
+    ));
 
 }
 
