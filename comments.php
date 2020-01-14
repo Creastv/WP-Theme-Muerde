@@ -15,7 +15,6 @@
 			</h2>
 
 		</header>
-		h1	jdhflk
 		
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
