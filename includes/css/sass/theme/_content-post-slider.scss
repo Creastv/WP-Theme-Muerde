@@ -1,0 +1,103 @@
+.owl-stage-outer{
+	padding: 20px 10px;
+	 @media #{$xs}{
+	 	padding-bottom: 0px;
+	 	padding-left: 0;
+	 }
+}
+.owl-dots{
+   display:none;
+}
+.display-left{
+	display:none;
+	 @media #{$xs}{
+	 	display: block;
+	 }
+}
+.posts{
+	padding: 20px 0;
+	 @media #{$xs}{
+	 	padding-bottom: 0px;
+	 }
+
+	.post{
+		// width: 600px;
+        display:inline-block;
+        vertical-align: top;
+        @media #{$xs}{
+            width: 100%;
+            padding-right: 15px;
+         }
+		.post-grid{
+			@include shadow;
+			padding: 15px;
+			margin: 10px;
+			border-radius:15px;
+			background:rgba(255, 255, 255, 0.8);
+			border: 1px solid #eee;
+
+			&:hover{
+				@include shadow;
+			}
+			@media #{$xs}{
+				box-shadow:none;
+			}
+			header{
+				width: 30%;
+			    display: inline-block;
+			    vertical-align: middle;
+			    @media #{$xs}{
+			    	width: 100%;
+			    }
+				.content-thumbnail{
+					border-radius:15px;
+					overflow: hidden;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+			
+				
+			}
+			.entry-content{
+				display: inline-block;
+				vertical-align: middle;
+				width: 68.5%;
+				padding: 0 10px;
+				@media #{$xs}{
+			    	width: 100%;
+			    }
+				span{
+					i{}
+				}
+				h2{
+					font-size: 18px;
+					font-weight: 700;
+					a{
+						color:inherit!important;
+						font-weight: 700;
+					}
+				}
+				.meta{
+					i{
+						color:$btn;
+					}
+					span{
+						color:$btn;
+						font-size: 14px;
+						a{
+							color:$btn!important;
+						}
+					}
+				}
+			}
+			footer{
+				text-align: right;
+				.vermas{
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

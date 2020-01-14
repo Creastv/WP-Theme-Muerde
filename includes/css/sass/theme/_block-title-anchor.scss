@@ -1,0 +1,31 @@
+.title-anchor{
+    padding-top: 30px;
+        padding-bottom: 30px;
+    h2{
+        font-weight: 700;
+        padding-left: 10px;
+        border-left:8px solid $btn;
+        position: relative;
+        line-height: 1.5;
+        
+         @media #{$xs} {
+            font-size: 21px;
+            line-height: 1.3
+         }
+        &:before{
+            position: absolute;
+            top:50%;
+            left:-5px;
+            -webkit-transform: translate(0, -50%) rotate(45deg);
+               -moz-transform: translate(0, -50%) rotate(45deg);
+                -ms-transform: translate(0, -50%) rotate(45deg);
+                 -o-transform: translate(0, -50%) rotate(45deg);
+                    transform: translate(0, -50%) rotate(45deg);
+            content:"";
+            width: 10px;
+            height: 10px;
+            background:$btn;
+
+        }
+    }
+}

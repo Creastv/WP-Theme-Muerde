@@ -1,0 +1,82 @@
+#la-campana {
+    position: relative;
+    z-index: 2;
+   clear: both;
+    padding-left: 150px;
+    padding-right: 150px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    @media #{$lg} {
+            padding:150px 50px ;
+        }
+         @media #{$sm} {
+            padding:80px 50px ;
+        }
+        @media #{$sm} {
+            padding:50px ;
+        }
+        @media #{$xs}{
+            padding: 20px 15px 100px;
+            text-align: center;
+            background:none!important;
+        }
+    .left {
+        width: 50%;
+        float: left;
+        @media #{$sm} {
+            padding-left: 15px;
+        }
+        @media #{$xs} {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        .title-section {
+        }
+
+        .content {
+        }
+
+
+    }
+
+    .right {
+        width: 35%;
+        float: right;
+        margin-left: -200px;
+        z-index: 2222222;
+        position: relative;
+         @media #{$sm}{
+            margin-top: 200px;
+        }
+        @media #{$xs} {
+            width: 100%;
+            display: none;
+        }
+        img{
+            animation: shake2 4.72s ease infinite;
+            transform: translate(0, 0,);
+            transform-origin: bottom center;
+            animation-iteration-count: infinite;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 400px;
+            margin-left: 100px;
+        }
+    }
+}
+
+
+@keyframes shake2 {
+   0% { transform:translate(0,0) }
+  1.78571% { transform:translate(5px,0) }
+  3.57143% { transform:translate(0,0) }
+  5.35714% { transform:translate(5px,0) }
+  7.14286% { transform:translate(0,0) }
+  8.92857% { transform:translate(5px,0) }
+  10.71429% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+}

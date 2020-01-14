@@ -1,0 +1,176 @@
+#participa-y-gana{
+    // padding-left: 50px;
+    // padding-right: 50px;
+    clear: both; 
+    margin-top: -200px;
+    .wraper{
+        padding-left: 150px;
+        padding-right: 150px;
+         @media #{$lg} {
+            padding:50px 50px ;
+        }
+         @media #{$sm} {
+            padding:80px 50px ;
+        }
+        @media #{$sm} {
+            padding:50px ;
+        }
+        @media #{$xs}{
+            padding: 20px 15px;
+        }
+    }
+    .center{
+        width: 100%;
+        display: block;
+        // background:#eee;
+        .left{
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            @media #{$lg} {
+                margin-top: 0px;
+            }
+            @media #{$md} {
+                margin-top: 100px;
+            }
+             @media #{$sm} {
+                display: none;
+             }
+            @media #{$xs}{
+                display: none;
+            }
+            img{
+                @media #{$sm} {
+                width: 200px;
+               }
+            }
+        }
+        .mobile{
+            display:none;
+            @media #{$sm}{
+                display: block;
+            }
+        }
+        .right{
+            width: 65%;
+            display: inline-block;
+            vertical-align: top;
+            @media #{$sm} {
+                vertical-align:top;
+                width: 100%;
+            }
+            @media #{$xs}{
+                width: 100%;
+            }
+            .content{
+                padding: 20px;
+                @media #{$sm}{
+                    padding:0px;
+                    text-align: center;
+                }
+                // @media #{$xs}{
+                //     padding:0px;
+                //     text-align: center;
+                // }
+                .title-section{
+                }
+            }
+            .bullets{
+                .bulet{
+                    @media #{$sm}{
+                        text-align: center;
+                    }
+                    display: inline-block;
+                    margin: 10px;
+                    width: 30%;
+                    @media #{$md}{
+                        width: 45%;
+                    }
+                    @media #{$sm}{
+                        width: 45%;
+                    }
+                    @media #{$xs}{
+                        width: 100%;
+                    }
+                    &:last-child{
+                        @media #{$md}{
+                            width: 100%;
+                        }
+                    }
+                    .nr{
+                        font-size: 51px;
+                        color:$main2;
+                        font-weight: 900;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 10%;
+                        position: relative;
+                        line-height: 1;
+                        @media #{$xxs}{
+                            // width: 100%;
+                        }
+                        &:before{
+                            content:"";
+                            background:#fff;
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            left:0px;
+                            bottom:0px;
+                            border-radius: 100%;
+                            z-index: 1;
+                        }
+                        span{
+                            position: relative;
+                            z-index: 2;
+                        }
+                    }
+                    .desc{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 85%;
+                        position: relative;
+                        z-index: 2;
+                        @media #{$sm}{
+                            width: initial;
+                        }
+                         @media #{$xxs}{
+                            width: 100%;
+                        }
+                        h3{
+                            color:$main2;
+                            font-weight: 900;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .buttons{
+                @media #{$sm}{
+                    text-align: center;
+                }
+
+               .btn{
+                    margin-top: 30px;
+                    @media #{$md}{
+                        margin-top: 30px;
+                    }
+                    @media #{$xs}{
+                        margin-top: 30px;
+                    }
+
+                } 
+            }
+            
+        }
+    }
+    .border-bg{
+        @media #{$md}{
+            max-width: 100%;
+        }
+         @media #{$sm}{
+            max-width: initial;
+        }
+    }
+}

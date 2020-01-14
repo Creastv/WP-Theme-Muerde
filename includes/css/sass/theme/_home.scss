@@ -1,0 +1,186 @@
+.hero{
+	background-color:$main2;
+	background-image:url(../img/bg.png);
+	background-size: cover;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-bottom: 250px;
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
+	@include shadow;
+}
+.hero{
+	@media #{$sm}{
+		padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 150px;
+	}
+	@media #{$xs}{
+		padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+	}
+	.wraper{
+		display: inline-block;
+		width: 100%;
+		.left{
+			width: 30%;
+			display:inline-block;
+			vertical-align: top;
+			position: relative;
+			@media #{$sm} {
+			 	width: 30%;
+			 }
+			@media #{$xs} {
+			 	width: 100%;
+			 }
+			&:before{
+				content:"";
+				width: 250px;
+				height: 190px;
+				background-image:url(../img/badge.png);
+				background-position:center;
+				background-size: cover;
+				display: block;
+				position: absolute;
+				z-index: 2;
+				top:-50px;
+				right:-50px;
+
+				 @media #{$sm} {
+				 	width: 112px;
+                    height: 85px;
+                    top: 10px;
+                    right: -10px;
+				 	background-position:center top;
+				 }
+				 @media #{$xs} {
+				 	background-position:center top;
+				 	width: 135px;
+                    height: 99px;
+                    top: 10px;
+                    right: 10px;
+				 }
+			}
+			.box-img{
+				// background-image:url(../img/dentista.png);
+				background-position:center;
+				background-size: cover;
+				width: 100%;
+			    position: absolute;
+			    height: 600px;
+			    border-radius: 50px;
+			    @include shadow;
+			    overflow: hidden;
+			    @media #{$sm} {
+			    	height: 420px;
+			    }
+			    @media #{$xs} {
+			    	background-position: top center;
+				 	position: inherit;
+				 	width: 90%;
+				 	margin: 0 auto;
+				 	height: 300px;
+				 }
+			    .doc{
+			    	background: $main;
+				    -webkit-transform: rotate(-90deg);
+				       -moz-transform: rotate(-90deg);
+				        -ms-transform: rotate(-90deg);
+				         -o-transform: rotate(-90deg);
+				            transform: rotate(-90deg);
+				    padding: 10px 15px 10px 70px;
+				    position: absolute;
+				    bottom: 78px;
+				    left: -103px;
+				    color:#fff;
+			    }
+			}
+			.box-img.bg-1{
+				background-image:url('../img/dentista.png');
+			}
+			.box-img.bg-2{
+				background-image:url('../img/dentista2.png');
+			}
+			.box-img.bg-3{
+				background-image:url('../img/dentista3.png');
+			}
+			.box-img.bg-4{
+				background-image:url('../img/dentista4.png');
+			}
+		}
+		.right{
+			padding: 15px 15px 15px 80px;
+			width: 68%;
+			display:inline-block;
+			vertical-align: top;
+			@media #{$sm}{
+				padding: 15px 15px 15px 15px;
+			}
+			@media #{$xs} {
+			 	width: 100%;
+			 	padding: 15px;
+
+			 }
+			h1{
+				color:#fff;
+				font-size: 51px;
+				font-weight: 900;
+				@media #{$sm} {
+					font-size: 21px;
+				}
+				@media #{$xs} {
+					font-size: 21px;
+				}
+			}
+			p{
+				color:#fff;
+				font-size: 21px;
+				@media #{$sm} {
+					font-size: 18px;
+				}
+			}
+			.btn-main{
+				display: inline-block;
+				vertical-align: middle;
+				@media #{$sm} {
+					width: 100%;
+				}
+				 @media #{$xs} {
+					width: 100%;
+                    text-align: center;
+                    font-size: 18px;
+                    padding: 10px 10px;
+				}
+			}
+			span{
+				font-size: 41px;
+				font-weight: 900;
+				color:#fff;
+				padding: 30px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: right;
+                line-height: 2;
+                @media #{$lg} {
+                	font-size: 31px;
+                }
+                @media #{$sm} {
+                 	font-size: 21px;
+                 	width: 100%;
+                 	padding: 0;
+                 	text-align: center;
+                 	margin-top: 20px;
+                 }
+                 @media #{$xs} {
+                 	font-size: 21px;
+                 	width: 100%;
+                 	padding: 0;
+                 	text-align: center;
+                 	margin-top: 20px;
+                 }
+			}
+
+		}
+	}
+}

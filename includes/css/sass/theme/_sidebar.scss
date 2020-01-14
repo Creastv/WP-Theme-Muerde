@@ -1,0 +1,108 @@
+.widget-title{
+	font-size: 21px;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    background: $main;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+}
+
+aside{
+	// background: #eee;
+    // padding: 30px;
+    border-radius: 0px;
+    margin-top: 15px;
+}
+
+.widget_nav_menu{
+    background: #f7f7f7;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 20px 15px;
+    ul{
+        li{
+            display: block;
+            width: 100%;
+            a{
+                font-size: 18px;
+                line-height: 1;
+                color:$main2;
+                font-weight: 900;
+                display: block;
+                padding: 5px 10px;
+                margin-top: 3px;
+                // border-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+                width: 100%;
+                @include tranz;
+                border-left:8px solid transparent;
+                position: relative;
+                &:before{
+                    position: absolute;
+                    top:50%;
+                    left: -5px;
+                    -webkit-transform: translate(0, -50%) rotate(45deg);
+                       -moz-transform: translate(0, -50%) rotate(45deg);
+                        -ms-transform: translate(0, -50%) rotate(45deg);
+                         -o-transform: translate(0, -50%) rotate(45deg);
+                            transform: translate(0, -50%) rotate(45deg);
+                    content:"";
+                    width: 10px;
+                    height: 10px;
+                    background: $btn;
+                    opacity:0;
+                     @include tranz;
+
+
+                }
+
+
+                &:hover{
+                    border-left:8px solid $btn;
+                    background:rgba($btn, 0.3);
+                    color:$main2;
+                    &:before{
+                        opacity:1;
+                    }
+                }
+                &:active{
+                    border-left:8px solid $btn;
+                    background:rgba($btn, 0.2);
+                    &:before{
+                        opacity:1;
+                    }
+                }
+                &:visited{
+                    border-left:8px solid $btn;
+                    background:rgba($btn, 0.1);
+                    &:before{
+                        opacity:1;
+                    }
+                }
+                &:focus{
+                    border-left:8px solid $btn;
+                    background:rgba($btn, 0.1);
+                    &:before{
+                        opacity:1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px !important;
+    z-index: 2;
+}
+
+.topNav{
+    top:100px!important;
+}

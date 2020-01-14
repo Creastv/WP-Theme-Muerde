@@ -1,0 +1,305 @@
+.anime {
+    position: relative;
+    height: 130px;
+
+    @media #{$xs} {
+        height: 46px;
+    }
+
+    @media #{$xxs} {
+        height: 58px;
+    }
+
+    .animal {
+        animation: shake 4.72s ease infinite;
+        transform: translate(0, 0, );
+        transform-origin: bottom center;
+        animation-iteration-count: infinite;
+        position: absolute;
+        @include tranz;
+        z-index: 2;
+        bottom: -118px;
+        left: 50px;
+        max-width: 200px;
+
+        @media #{$xs} {
+            bottom: -24px;
+            left: 15px;
+            max-width: 55px;
+        }
+    }
+
+    .circulos {
+        position: absolute;
+        max-width: 500px;
+        z-index: -1;
+        width: 100%;
+
+        @media #{$xs} {
+            max-width: 150px;
+        }
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    1.78571% {
+        transform: translate(5px, 0)
+    }
+
+    3.57143% {
+        transform: translate(0, 0)
+    }
+
+    5.35714% {
+        transform: translate(5px, 0)
+    }
+
+    7.14286% {
+        transform: translate(0, 0)
+    }
+
+    8.92857% {
+        transform: translate(5px, 0)
+    }
+
+    10.71429% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+// @-webkit-keyframes animal {
+//   0% {
+//   	transform: rotate(0deg);
+//     -webkit-transform: rotate(0deg);
+//   }
+//   12%  {
+//   	transform: rotate(10deg);
+//     -webkit-transform: rotate(10deg);
+//   }
+//   13% {
+//   	transform: rotate(0deg);
+//     -webkit-transform: rotate(0deg);
+//   }
+//   14%  {
+//   	transform: rotate(-10deg);
+//     -webkit-transform: rotate(-10deg);
+//   }
+//   15%  {
+//   	transform: rotate(0deg);
+//     -webkit-transform: rotate(0deg);
+//   }
+
+//   100% {
+//   	transform: rotate(0deg);
+//     -webkit-transform: rotate(0deg);
+//   }
+// }
+
+#footer {
+    background: $main;
+
+    @media #{$xxs} {
+        padding: 20px 15px 20px;
+    }
+
+    .social-contact {
+        padding: 15px;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 20px 0px;
+        background: #fff;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            color: $main2;
+            font-size: 28px;
+            font-weight: 900;
+
+            @media #{$xxs} {
+                font-size: 18px;
+                margin-bottom: 10px;
+                line-height: 1;
+            }
+        }
+
+        ul {
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 0px;
+
+            @media #{$xxs} {
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+                padding: 0;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 5px;
+                padding: 3px;
+                background: rgba(32, 216, 233, 0.28);
+                border-radius: 100%;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+
+                a {
+                    font-size: 29px;
+
+                }
+            }
+        }
+    }
+
+    #info {
+        padding: 20px 0px;
+
+        hr {
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        p {
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+
+    #tercero-menu {
+        display: block;
+        text-align: center;
+        width: 100%;
+
+        li {
+            display: inline-block;
+            position: relative;
+
+            a {
+
+                padding: 5px;
+                color: #fff;
+
+                &:hover {
+                    background: $main;
+                }
+            }
+        }
+    }
+
+    #secundary-menu {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0px;
+
+        li {
+            display: inline-block;
+            ;
+            position: relative;
+
+            a {
+                color: #fff;
+                font-weight: 900;
+                font-size: 21px;
+                padding: 5px 25px;
+
+                &:hover {
+                    background: $main;
+                }
+            }
+        }
+    }
+
+    .inicio {
+        &:before {
+            width: 27px;
+            height: 31px;
+            content: "";
+            background-image: url(../img/ico-home.png);
+            background-size: cover;
+            display: block;
+            position: absolute;
+
+        }
+    }
+
+    .la-campana {
+        &:before {
+            width: 32px;
+            height: 29px;
+            content: "";
+            background-image: url(../img/ico-la-campana.png);
+            background-size: cover;
+            display: block;
+            position: absolute;
+
+        }
+    }
+
+    .donde-estamos {
+        &:before {
+            width: 32px;
+            height: 32px;
+            content: "";
+            background-image: url(../img/ico-dondeestamos.png);
+            background-size: cover;
+            display: block;
+            position: absolute;
+
+        }
+    }
+
+    .actualidad {
+        &:before {
+            width: 38px;
+            height: 29px;
+            content: "";
+            background-image: url(../img/ico-actualidades.png);
+            background-size: cover;
+            display: block;
+            position: absolute;
+
+        }
+    }
+
+}
+
+
+#goToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 999999999999999999999;
+    border: none;
+    outline: none;
+    background-color: $main3;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+
+    @media #{$xs} {
+        padding: 5px;
+        left: 10px;
+        bottom: 10px;
+    }
+
+
+}
+
+#goToTop:hover {
+    background-color: darken($main3, 10%);
+}

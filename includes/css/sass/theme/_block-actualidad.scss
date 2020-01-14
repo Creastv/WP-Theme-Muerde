@@ -1,0 +1,47 @@
+#actualidad{
+  @include gradien-radial-white;
+    clear: both; 
+    padding:50px 50px 50px;
+     @media #{$lg} {
+        padding:50px 50px ;
+    }
+     @media #{$sm} {
+        padding:80px 50px ;
+    }
+    @media #{$sm} {
+        padding:50px ;
+    }
+    @media #{$xs}{
+        padding: 20px 0px;
+    }
+    .title-section{
+        text-align: center;
+        h2{
+        }
+    }
+    .content{
+        width: 60%;
+        margin: 0 auto;
+        @media #{$lg} {
+            width: 100%;
+        }
+        @media #{$sm} {
+            width: 100%;
+        }
+    }
+    .wraper-posts{
+        padding: 20px;
+        margin: 0 auto;
+        @media #{$xs}{
+            padding:0;
+        }
+
+    }
+    .posts .post{
+        padding: 30px;
+        @media #{$xs}{
+            padding:0px;
+        }
+    }
+    
+}
