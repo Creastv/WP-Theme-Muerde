@@ -1,5 +1,5 @@
 
-  console.log("test");
+
   AOS.init();
 
   jQuery(window).scroll(function() {    

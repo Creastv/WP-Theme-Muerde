@@ -38,6 +38,7 @@
 					    <?php wp_nav_menu( array(
 							'theme_location' => 'primary', // Defined when registering the menu
 							'menu_id'        => 'primary-menu',
+							'link_class'   => 'animsition-link',
 							'container'      => false,
 							'depth'          => 2,
 							'menu_class'     => 'navbar-nav ',

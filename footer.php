@@ -71,7 +71,7 @@
     <div class="row"  id="info">
       <div class="col text-center">
         <hr>
-        <p>© 2019 | Consejo Andaluz de Colegios Oficiales de Dentistas</p>
+        <p>© 2020 | Consejo Andaluz de Colegios Oficiales de Dentistas</p>
         <p>Campaña desarrollada por Descubre Comunicación</p>
       </div>
     </div>
@@ -81,9 +81,48 @@
 
 <div id="participa-cta">
   <div id="wraper-cta">
+    <div onclick="openPromo()" id="easylink_8854167">
+
+      
+    </div>
   </div>
 </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe id="iframe" src="" width="100%" height="500" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+  </div>
+</div>
+<script>
+
+setTimeout(function() {
+  var f = document.getElementById('iframe');
+  f.src = 'https://pr.easypromosapp.com/p/885416?micro=1&utm_source=widget&utm_medium=embed';
+}, 2000);
+
+if (jQuery(window).width() > 768) {
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    function openPromo() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+} else {
+  function openPromo() {
+      window.open("https://pr.easypromosapp.com/p/885416?micro=1&utm_source=widget&utm_medium=embed");
+}
+};
+</script>
 <?php wp_footer(); ?>
 
 <script>
@@ -128,31 +167,46 @@
     jQuery(window).load(function() {
         if(!localStorage.shown) {
             var jsBox = jQuery('\
-                <span id="close-promo" class="close">x</span>\
                 <div class="circle-banner"><div class="anime"></div></div>\
                 <div class="circle-banner2"><div class="anime"></div></div>\
-                <a onclick="goclicky(this); return false;" target="_blank" href="#"><img src="<?php echo get_template_directory_uri(); ?>/includes/img/banner-participa.png" alt=""></a>\
-              ').hide().fadeIn(1000);
-            //more code like closing btn...
-             jQuery('#wraper-cta').append(jsBox);
-             jQuery('#countDown').show();
+                <img src="<?php echo get_template_directory_uri(); ?>/includes/img/banner-participa.png" alt="">\
+            ').hide().fadeIn(1000);
+
+            var jsBoxClose = jQuery('\
+                <span id="close-promo" class="close">x</span>\
+            ').hide().fadeIn(1000);
+            jQuery('#easylink_8854167').append(jsBox);
+            jQuery('#wraper-cta').append(jsBoxClose);
             
         }
         jQuery("#close-promo").click(function() {
             jQuery('#participa-cta').fadeOut(200);
-            jQuery('#countDown').hide();
+            console.log('logout');
             localStorage.shown = true;
         });
 
     });
-    function goclicky(meh){
-          var x = screen.width/2 - 700/2;
-          var y = screen.height/2 - 700/2;
-          window.open('https://sorteodonavidaalplaneta.com', 'sharegplus','height=700,width=700,left='+x+',top='+y);
-    }
-    jQuery("#rev_slider_3_1_wrapper").click( function(){
-        goclicky(this); return false;
-    }); 
 </script>
+<script>
+  jQuery(document).ready(function() {
+  jQuery("#body").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 0,
+    outDuration: 100,
+    linkElement: 'a:not([target="_blank"])',
+    timeout: true,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+
+
+
+    
+
 </body>
 </html>

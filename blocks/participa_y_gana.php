@@ -44,7 +44,9 @@ $id = 'participaygana-' . $block['id'];
 				<?php endif; ?>
 				<?php if(get_field('enlace_participa') && get_field('button_participa')): ?>
 					<div class="buttons" data-aos="zoom-in-up" >
-						<a href="<?php the_field('enlace_participa_dos'); ?>" class="btn btn-main"><?php the_field('button_participa_dos'); ?></a>
+						<?php if(get_field('enlace_participa_dos') && get_field('button_participa_dos')): ?>
+						    <a href="<?php the_field('enlace_participa_dos'); ?>" class="btn btn-main"><?php the_field('button_participa_dos'); ?></a>
+						<?php endif; ?>
 						<a href="<?php the_field('enlace_participa'); ?>" class="btn btn-participa"><?php the_field('button_participa'); ?></a>
 					</div>
 				<?php endif; ?>
